@@ -27,6 +27,12 @@ const xItem = randomValueFromArray(insertX)
 const yItem = randomValueFromArray(insertY)
 const zItem = randomValueFromArray(insertZ)
 
+let patternX = /:insertx:/
+let patternY = /:inserty:/
+let patternZ = /:insertz:/
+
+
+
 randomize.addEventListener('click', result);
 
 function result() {
