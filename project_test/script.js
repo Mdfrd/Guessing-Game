@@ -5,7 +5,7 @@ window.addEventListener("scroll", () => {
 	const firstImage = images[0];
 	const secondImage = images[1];
 
-	const translateY = (scrollPosition - firstImage.offsetTop) * 0.01 + "px";
+	const translateY = (scrollPosition - firstImage.offsetTop) * 0.1 + "px";
 	const scale = 1 + (scrollPosition - firstImage.offsetTop) / 200;
 
 	firstImage.style.transform = `translateY(${translateY}) scale(${scale})`;
