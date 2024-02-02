@@ -2,28 +2,21 @@ const images = document.querySelectorAll(".scrolling-image");
 
 window.addEventListener("scroll", () => {
 	const scrollPosition = window.scrollY;
-	const firstImage = images[0];
-	const secondImage = images[1];
 
-	const translateY = (scrollPosition - firstImage.offsetTop) * 0.1 + "px";
-	const scale = 1 + (scrollPosition - firstImage.offsetTop) / 200;
+	images.forEach((image, index) => {
+		const translateY = (scrollPosition - image.offsetTop) * 0.1 + "px";
+		const scale = 1 + (scrollPosition - image.offsetTop) / 300;
 
-	firstImage.style.transform = `translateY(${translateY}) scale(${scale})`;
+		image.style.transform = `translateY(${translateY}) scale(${scale})`;
 
-	if (scrollPosition > firstImage.offsetTop + firstImage.offsetHeight) {
-		const opacity =
-			1 -
-			(scrollPosition -
-				(firstImage.offsetTop + firstImage.offsetHeight)) /
-				500;
+		if (scrollPosition > image.offsetTop + image.offsetHeight) {
+			const opacity =
+				1 -
+				(scrollPosition - (image.offsetTop + image.offsetHeight)) / 500;
 
-		firstImage.style.opacity = opacity < 0 ? 0 : opacity;
-		secondImage.style.opacity =
-			(scrollPosition -
-				(firstImage.offsetTop + firstImage.offsetHeight)) /
-			500;
-	} else {
-		firstImage.style.opacity = 1;
-		secondImage.style.opacity = 0;
-	}
+			image.style.opacity = opacity < 0 ? 0 : opacity;
+		} else {
+			image.style.opacity = 1;
+		}
+	});
 });
