@@ -19,17 +19,10 @@ body {
 	border-radius: 10px;
 	width: 100vw;
 	height: 100vh;
-	object-fit: cover;
-	transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+	object-fit: contain;
+	transition: transform 1ms ease-out, opacity 0.1s ease-out;
 }
 
 .hidden {
 	opacity: 0;
-}
-
-.mid-box {
-	border-radius: 10px;
-	border: 5px;
-	background-color: aquamarine;
-	align-items: center;
 }
