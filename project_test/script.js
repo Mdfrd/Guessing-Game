@@ -3,9 +3,9 @@ const images = document.querySelectorAll(".scrolling-image");
 window.addEventListener("scroll", () => {
 	const scrollPosition = window.scrollY;
 
-	images.forEach((image, index) => {
+	images.forEach((image) => {
 		const translateY = (scrollPosition - image.offsetTop) * 0.1 + "px";
-		const scale = 1 + (scrollPosition - image.offsetTop) / 300;
+		const scale = 1 + (scrollPosition - image.offsetTop) / 600;
 
 		image.style.transform = `translateY(${translateY}) scale(${scale})`;
 
