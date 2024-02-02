@@ -16,7 +16,7 @@ body {
 }
 
 .scrolling-image {
-	border-radius: 600px;
+	border-radius: 50%;
 	width: 100vw;
 	height: 100vh;
 	object-fit: contain;
